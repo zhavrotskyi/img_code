@@ -5,6 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style type="text/css">
+    #myProgress {
+    width: 0%;
+  background-color: grey;
+  border-radius: 8;
+}
+
+#myBar {
+  width: 0%;
+  height: 0px;
+  background-color: green;
+  border-radius: 8;
+}    
+
+
+</style>
+
 </head>
 
 <body>
@@ -16,11 +34,19 @@
     
     <input type="text" id="backTextInput"><br-->
 
-    <input type="file" accept="image/*" onchange="openFile(event)"><br><br>
+    <div id="inputs"><input type="number" id = "mm" value="3"><input id="selectFile"  type="file" accept="image/*" onchange="openFile(event)">
+        <input type="button" id="recode" value="Перекодувати" onclick="recode()" disabled=true></div><br><br>
+
+
+
     <!--img id="input_img" style="height:100%; width:100%;"-->
     <!--img id="input_img">
     <img id="output_img">
     <img id="test_img"-->
+
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
 
     <canvas id="input_canvas"></canvas><br>
     <canvas id="output_canvas"></canvas><br>
